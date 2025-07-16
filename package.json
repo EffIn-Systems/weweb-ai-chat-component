@@ -1,0 +1,56 @@
+{
+    "name": "@wrl04/weweb-ai-chat",
+    "version": "1.0.2",
+    "description": "AI Chat widget for WeWeb with webhook integration",
+    "main": "dist/component.js",
+    "sideEffects": false,
+    "scripts": {
+        "build": "weweb build -- name=ai-chat type=element",
+        "serve": "node patch-webpack-dev.js && weweb serve -- name=ai-chat type=element",
+        "dev": "npm run serve",
+        "clean": "rm -rf dist node_modules/.cache",
+        "rebuild": "npm run clean && npm install && npm run build"
+    },
+    "files": [
+        "dist/",
+        "ww-config.json",
+        "ww-config.js",
+        "patch-webpack-dev.js"
+    ],
+    "keywords": [
+        "weweb",
+        "chat",
+        "ai",
+        "webhook",
+        "assistant"
+    ],
+    "author": "wrl04",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wrl04/weweb-ai-chat.git"
+    },
+    "bugs": {
+        "url": "https://github.com/wrl04/weweb-ai-chat/issues"
+    },
+    "homepage": "https://github.com/wrl04/weweb-ai-chat#readme",
+    "peerDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.22.0",
+        "@babel/preset-react": "^7.22.0",
+        "@weweb/cli": "latest",
+        "babel-loader": "^9.1.0",
+        "css-loader": "^6.8.0",
+        "style-loader": "^3.3.0",
+        "webpack": "^5.88.0",
+        "webpack-cli": "^5.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
