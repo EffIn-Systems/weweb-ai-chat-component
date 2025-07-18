@@ -1,8 +1,19 @@
-cat > webpack.config.js << 'EOF'
 module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.vue']
   },
+
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
+  },
+
+  output: {
+    library: 'YourComponent',
+    libraryTarget: 'umd',
+    globalObject: 'this'
+  },
+
   module: {
     rules: [
       {
@@ -18,4 +29,3 @@ module.exports = {
     ]
   }
 };
-EOF
