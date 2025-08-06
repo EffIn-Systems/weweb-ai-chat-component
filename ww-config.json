@@ -1,0 +1,124 @@
+{
+    "name": "AI Chat",
+    "componentPath": "./src/wwElement.vue",
+    "type": "element",
+    "options": {
+      "sizable": true,
+      "autoHeight": false
+    },
+    "editor": {
+      "label": {
+        "en": "AI Chat Assistant"
+      },
+      "icon": "chat",
+      "customSettingsPropertiesOrder": [
+        "webhookUrl",
+        "roomId",
+        "userId",
+        "userName",
+        "placeholder",
+        "emptyStateMessage",
+        "expandable",
+        "theme"
+      ]
+    },
+    "properties": {
+      "webhookUrl": {
+        "label": {
+          "en": "Webhook URL"
+        },
+        "type": "Text",
+        "bindable": true,
+        "defaultValue": "https://hooks.make.com/your-webhook-id",
+        "section": "settings",
+        "required": true,
+        "bindingValidation": {
+          "type": "string",
+          "tooltip": "Make.com webhook URL for AI processing"
+        }
+      },
+      "roomId": {
+        "label": {
+          "en": "Room ID / RFP ID"
+        },
+        "type": "Text",
+        "bindable": true,
+        "defaultValue": "default-room",
+        "section": "settings",
+        "bindingValidation": {
+          "type": "string",
+          "tooltip": "Unique identifier for this chat session"
+        }
+      },
+      "userId": {
+        "label": {
+          "en": "User ID"
+        },
+        "type": "Text",
+        "bindable": true,
+        "defaultValue": "anonymous",
+        "section": "settings",
+        "bindingValidation": {
+          "type": "string",
+          "tooltip": "Current user's ID"
+        }
+      },
+      "userName": {
+        "label": {
+          "en": "User Name"
+        },
+        "type": "Text",
+        "bindable": true,
+        "defaultValue": "User",
+        "section": "settings",
+        "bindingValidation": {
+          "type": "string",
+          "tooltip": "Display name for the user"
+        }
+      },
+      "placeholder": {
+        "label": {
+          "en": "Input Placeholder"
+        },
+        "type": "Text",
+        "defaultValue": "Type or paste your message...",
+        "section": "design"
+      },
+      "emptyStateMessage": {
+        "label": {
+          "en": "Empty State Message"
+        },
+        "type": "Text",
+        "defaultValue": "How can I help?",
+        "section": "design"
+      },
+      "expandable": {
+        "label": {
+          "en": "Allow Fullscreen"
+        },
+        "type": "OnOff",
+        "defaultValue": true,
+        "section": "design"
+      },
+      "theme": {
+        "label": {
+          "en": "Theme"
+        },
+        "type": "TextSelect",
+        "options": {
+          "options": [
+            {
+              "value": "dark",
+              "label": "Dark (Default)"
+            },
+            {
+              "value": "light",
+              "label": "Light"
+            }
+          ]
+        },
+        "defaultValue": "dark",
+        "section": "design"
+      }
+    }
+  }
